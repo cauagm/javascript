@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: rgba(192, 255, 192, 0.6);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            color: rgb(0, 61, 0);
+        }
+        input[type ="text"] {
+            border: solid green 2px;
+            box-shadow: 1px 2px 5px black;
+        }
+        .pergunta{
+            font-weight: bold;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Sistema de Nacionalidade</h1>
-    Qual sua nacionalidade? <input type="text" name="txtpais" id="txtpais">
-    <input type="button" value="Verificar" onclick="verificar()">
+    <p class="pergunta"">Qual sua nacionalidade? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()"></p>
     <div id="res">
 
     </div>
