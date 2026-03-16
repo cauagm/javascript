@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio boas-vindas</title>
+    <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: lightgray;
+        }
+
+        button:hover {
+            background-color: lightblue;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boas-vindas</h1>
+    <button onclick="clicar()">Inicie o desafio</button>
+    <script>
+        function clicar() {
+            let nome = prompt('Qual seu nome?')
+            let idade = prompt(`Olá ${nome}! Quantos anos você tem?`)
+            alert(`Acabei de conhecer o ${nome}, que tem ${idade} anos de idade!`)
+        }
+        
+    </script>
+</body>
+</html>
