@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+    <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: lightgray;
+        }
+
+        button:hover {
+            background-color: lightblue;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button onclick="converter()">Converter</button>
+    <p id="res">Clique no botão acima para continuar</p>
+    <p id="res2"></p>
+    <script>
+        function formatar(num) {
+            return num.toLocaleString('pt-BR', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 3
+            })
+        }
+        function converter() {
+            let med = Number(prompt('Digite uma distância em metros(m)'))
+            let res = document.getElementById('res')
+            let res2 = document.getElementById('res2')
+            let convKm = med / 1000
+            let convHm = med / 100
+            let convDam = med / 10
+            let convDm = med * 10
+            let convCm = med * 100
+            let convMm = med * 1000
+
+            res.innerHTML = `<strong>A distância de ${med} metros, corresponde a...</strong>`
+            res2.innerHTML = `
+                ${convKm.toLocaleString('pt-BR', { maximumFractionDigits: 3 })} quilômetros (Km) <br>
+                ${convHm.toLocaleString('pt-BR', { maximumFractionDigits: 3 })} hectômetros (Hm) <br>
+                ${convDam.toLocaleString('pt-BR', { maximumFractionDigits: 3 })} decâmetros (Dam) <br>
+                ${convDm.toLocaleString('pt-BR', { maximumFractionDigits: 1 })} decímetros (Dm) <br>
+                ${convCm.toLocaleString('pt-BR', { maximumFractionDigits: 0 })} centímetros (Cm) <br>
+                ${convMm.toLocaleString('pt-BR', { maximumFractionDigits: 0 })} milímetros (Mm)
+                `
+        }
+    </script>
+</body>
+</html>
