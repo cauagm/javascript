@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperaturas</title>
+    <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: lightgray;
+        }
+
+        button:hover {
+            background-color: lightblue;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Conversor de Temperaturas</h1>
+        <button onclick="converter()">Converter</button>
+    </div>
+    <div id="res">
+        <p>Clique no botão acima para iniciar</p>
+    </div>
+    <script>
+        function converter() {
+            let cel = Number(prompt('Digite uma temperatura em °C (Celsius)'))
+            let kv = cel + 273.15
+            let fh = cel * 1.8 + 32
+            let res = document.getElementById('res')
+            res.innerHTML = `<p><strong>A temperatura de ${cel}°C, corresponde a...</strong></p> 
+            <p>${kv.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}°K (Kelvin)</p>
+            <p>${fh.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}°F (Fahrenheit)</p>`
+             
+        }
+        
+            
+    </script>
+</body>
+</html>
