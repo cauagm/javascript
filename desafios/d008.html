@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> US$</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(177, 255, 177, 0.749);
+        }
+
+        h1 {
+            font-size: 2.8em;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 1.8em;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: rgba(255, 98, 98, 0.855);
+            transition: .3s ease;
+        }
+
+        p {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Conversor R$ &#10145 US$</h1>
+        <button onclick="converter()">Converter</button>
+    </div>
+    <div id="res">
+        <p>Clique no botão acima para iniciar</p>
+    </div>
+    <script>
+        let cot = Number(prompt('Antes de mais nada. Quanto está a cotação do dólar agora?'))
+        function converter() {
+            let real = Number(prompt('Quantos R$ você tem na carteira?'))
+            let dolar = real / cot
+            alert(`Com R$${real.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})} você consegue comprar US$${dolar.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} dólares`)
+        }
+    </script>
+</body>
+</html>
