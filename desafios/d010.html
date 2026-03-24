@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reajustar salário</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            font-size: 2.8em;
+        }
+        button {
+            padding: 20px;
+            font-size: 1.5em;
+            border-radius: 25px;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.235);
+            transition: transform .2s ease;
+        }
+
+        button:hover{
+            transform: translateY(-3px);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.23);
+        }
+        p {
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
-    
+    <div>
+        <h1>Reajuste salarial</h1>
+        <button onclick="reajuste()">Reajustar Salário</button>
+    </div>
+    <div id="res">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+    <script>
+        function reajuste() {
+            let nome = prompt('Qual é o nome do funcionário?')
+            let salario = Number(prompt(`Qual é o salário de ${nome}?`))
+            let aumento = Number(prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`))
+            let res = document.getElementById('res')
+            let aumentoSalario = salario * aumento / 100
+            let salarioFinal = salario + aumentoSalario
+            res.innerHTML = `<p><strong>${nome} recebeu um aumento salarial!</strong></p>`
+            res.innerHTML += `<p>O salário atual era R$ ${salario.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}.</p>`
+            res.innerHTML += `<p>Com um aumento de ${aumento}%, o salário vai aumentar R$ ${aumentoSalario.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})} no próximo mês.</p>`
+            res.innerHTML += `<p>E a partir daí, ${nome} vai passar a ganhar R$ ${salarioFinal.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}.</p>`
+        }
+    </script>
 </body>
 </html>
