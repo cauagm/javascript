@@ -13,6 +13,7 @@ Repositório com desafios que resolvi durante meus estudos de JavaScript.
 * 📌 Desafio 7 — Conversor de temperatura
 * 📌 Desafio 8 — Conversor monetário
 * 📌 Desafio 9 — Calculo de desconto
+* 📌 Desafio 10 — Reajuste salarial
 
 🚀 Objetivo
 
