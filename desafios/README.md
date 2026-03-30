@@ -14,6 +14,7 @@ Repositório com desafios que resolvi durante meus estudos de JavaScript.
 * 📌 Desafio 8 — Conversor monetário
 * 📌 Desafio 9 — Calculo de desconto
 * 📌 Desafio 10 — Reajuste salarial
+* 📌 Desafio 11 — Consulta ano bissexto
 
 🚀 Objetivo
 
