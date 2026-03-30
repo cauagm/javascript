@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço mudou</title>
+        <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            font-size: 2.8em;
+        }
+        button {
+            padding: 20px;
+            font-size: 1.5em;
+            border-radius: 25px;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.235);
+            transition: transform .2s ease;
+        }
+
+        button:hover{
+            transform: translateY(-3px);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.23);
+        }
+        p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Preço mudou</h1>
+        <button onclick="verificar()">Verificar</button>
+    </div>
+    <div id="res">
+        <p>Clique no botão acima para analisar a mudança de preço</p>
+    </div>
+    <script>
+        function verificar(){
+            let preco1 = Number(prompt('Qual era o preço anterior do produto?'))
+            let preco2 = Number(prompt('Qual é o preço atual do produto?'))
+            let  res = document.getElementById('res')
+            let dif1 = preco2 - preco1
+            let dif2 = preco1 - preco2
+            let variacao = ((preco2 - preco1) / preco1) * 100
+            res.innerHTML = `<p><strong>Analisando os valores informados</strong></p>`
+            res.innerHTML += `<p>O produto custava R$ ${preco1.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})} e agora custa R$ ${preco2.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}.`
+            if (preco1 < preco2) {
+                res.innerHTML += `<p>Hoje o produto está mais caro.</p>`
+                res.innerHTML += `<p>O preço subiu R$ ${dif1.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})} em relação ao preço anterior`
+                res.innerHTML += `<p>Uma variação de ${variacao.toLocaleString ('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}% pra cima.</p>`
+            }else {
+                res.innerHTML += `<p>Hoje o produto está mais barato.</p>`
+                res.innerHTML += `<p>O preço caiu R$ ${dif2.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})} em relação ao preço anterior`
+                res.innerHTML += `<p>Uma variação de ${variacao.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}% pra baixo.</p>`
+            }
+            
+        }
+    </script>
+</body>
+</html>
