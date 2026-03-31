@@ -15,6 +15,7 @@ Repositório com desafios que resolvi durante meus estudos de JavaScript.
 * 📌 Desafio 9 — Calculo de desconto
 * 📌 Desafio 10 — Reajuste salarial
 * 📌 Desafio 11 — Consulta ano bissexto
+* 📌 Desafio 12 — Mudança de preço
 
 🚀 Objetivo
 
