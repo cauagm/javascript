@@ -16,6 +16,7 @@ Repositório com desafios que resolvi durante meus estudos de JavaScript.
 * 📌 Desafio 10 — Reajuste salarial
 * 📌 Desafio 11 — Consulta ano bissexto
 * 📌 Desafio 12 — Mudança de preço
+* 📌 Desafio 13 — Situação do aluno
 
 🚀 Objetivo
 
